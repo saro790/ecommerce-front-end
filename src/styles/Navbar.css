@@ -1,0 +1,111 @@
+/* 🌈 3D Glassmorphism Navbar */
+nav.navbar {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 0 0 20px 20px;
+  transition: all 0.4s ease;
+  z-index: 1000;
+  position: sticky;
+  top: 0;
+}
+
+/* Brand style */
+.navbar-brand {
+  font-weight: 800;
+  font-size: 1.6rem;
+  color: #8d7923 !important;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+  transform: perspective(400px) translateZ(10px);
+  transition: all 0.3s ease-in-out;
+}
+.navbar-brand:hover {
+  text-shadow: 0 0 20px rgba(0, 255, 255, 1);
+  transform: perspective(400px) translateZ(20px);
+}
+
+/* Nav links */
+.nav-link {
+  color: #1e0404 !important;
+  margin: 0 10px;
+  font-weight: 500;
+  transition: transform 0.3s ease, color 0.3s ease;
+  position: relative;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -3px;
+  left: 0;
+  background: rgb(21, 180, 32);
+  transition: width 0.3s ease;
+}
+.nav-link:hover {
+  color: rgb(30, 184, 81) !important;
+  transform: translateY(-2px) scale(1.05);
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Buttons */
+.btn {
+  border-radius: 10px !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.btn:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 255, 255, 0.3);
+}
+
+/* Username */
+.me-2 {
+  color: #9883cb;
+  font-weight: 600;
+  text-shadow: 0 0 8px rgba(0, 255, 255, 0.4);
+}
+
+/* Background image */
+body {
+  background: url("C:/Users/SAROJINI D/OneDrive/Desktop/grocery items/back.jpg") no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .navbar-collapse {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 10px;
+  }
+  .nav-link {
+    display: block;
+    text-align: center;
+    margin: 8px 0;
+  }
+  .navbar-brand {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 576px) {
+  nav.navbar {
+    padding: 0.5rem 1rem;
+  }
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+  .nav-link {
+    font-size: 0.9rem;
+  }
+  .btn {
+    font-size: 0.8rem;
+  }
+}

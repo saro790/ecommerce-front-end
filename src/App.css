@@ -1,0 +1,35 @@
+/* Gradient Navbar */
+.navbar.bg-gradient {
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+}
+
+/* Navbar Brand */
+.navbar-brand {
+  font-size: 22px;
+  color: #fff !important;
+  letter-spacing: 1px;
+}
+
+/* Navbar Links */
+.nav-link {
+  font-size: 16px;
+  color: #fff !important;
+  margin-right: 10px;
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  color: #ffd369 !important;
+}
+
+/* Logout Button */
+.navbar .btn-danger {
+  font-size: 14px;
+  padding: 6px 14px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.navbar .btn-danger:hover {
+  transform: scale(1.05);
+}
