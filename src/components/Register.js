@@ -1,9 +1,8 @@
-// src/components/Register.js
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 import { useAuth } from "../context/AuthContext";
-import "../styles/register.css"; // CSS already uses /back.jpg from public
+import "../styles/register.css";
 
 function Register() {
   const [formData, setFormData] = useState({
@@ -28,8 +27,7 @@ function Register() {
     }
 
     try {
-      // ✅ Use environment variable for API URL
-      const API_URL = process.env.REACT_APP_API_URL || "http://127.0.0.1:8000/api";
+      const API_URL = process.env.REACT_APP_API_URL;
       await axios.post(`${API_URL}/register/`, {
         username: formData.username,
         password: formData.password,
@@ -43,7 +41,10 @@ function Register() {
   };
 
   return (
-    <div className="register-page" style={{ backgroundImage: "url('/back.jpg')" }}>
+    <div
+      className="register-page"
+      style={{ backgroundImage: `url(/back.jpg)` }}
+    >
       <div className="register-container">
         <h2 className="register-title">Register</h2>
         {error && <div className="register-message">{error}</div>}
