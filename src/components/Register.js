@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 import { useAuth } from "../context/AuthContext";
-import backgroundImage from "../assets/back.jpg"; // ✅ asset image
+import backgroundImage from "/"; // ✅ asset image
 import "../styles/register.css";
 
 function Register() {
