@@ -1,6 +1,6 @@
 /* Full page background */
 .register-page {
-  background-image: url('/back.jpg'); 
+  background-image: url('../assets/back.jpg');
   width: 100vw;
   height: 100vh;
   background-size: cover;
