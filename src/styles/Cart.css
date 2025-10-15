@@ -1,6 +1,6 @@
 .cart-container {
   width:100vw; min-height:100vh; display:flex; justify-content:center; align-items:center; position:relative;
-  background-image:url('/cart.jpg'); /* public folder-ல் உள்ள படம் */
+  background-image:url('public/cart.jpg'); /* public folder-ல் உள்ள படம் */
   background-size:cover; background-position:center; background-repeat:no-repeat;
 }
 .cart-container::before {
