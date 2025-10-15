@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 import { useAuth } from "../context/AuthContext";
-import backgroundImage from "/"; // ✅ asset image
 import "../styles/register.css";
 
 function Register() {
@@ -43,7 +42,11 @@ function Register() {
   return (
     <div
       className="register-page"
-      style={{ backgroundImage: `url(${backgroundImage})` }}
+      style={{
+        backgroundImage: `url(${process.env.PUBLIC_URL}/back.jpg)`, // ✅ Correct for Netlify
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
     >
       <div className="register-container">
         <h2 className="register-title">Register</h2>
