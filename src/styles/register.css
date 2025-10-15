@@ -1,6 +1,6 @@
 /* Full page background */
 .register-page {
-  background-image: url('../assets/back.jpg');
+  background-image: url('/back.jpg'); /* Use public folder image for Netlify */
   width: 100vw;
   height: 100vh;
   background-size: cover;
