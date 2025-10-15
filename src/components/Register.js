@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 import { useAuth } from "../context/AuthContext";
-import "../styles/register.css";
+import "../styles/register.css"; // ✅ CSS handles background
 
 function Register() {
   const [formData, setFormData] = useState({
@@ -40,14 +40,7 @@ function Register() {
   };
 
   return (
-    <div
-      className="register-page"
-      style={{
-        backgroundImage: `url(${process.env.PUBLIC_URL}/back.jpg)`, // ✅ Correct for Netlify
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
+    <div className="register-page">
       <div className="register-container">
         <h2 className="register-title">Register</h2>
         {error && <div className="register-message">{error}</div>}
