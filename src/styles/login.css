@@ -1,6 +1,6 @@
 /* Full page with background */
 .login-page {
-  
+  background-image: url('/src/assets/beach.jpg');
   width: 100vw;
   height: 100vh;
   background-size: cover;
