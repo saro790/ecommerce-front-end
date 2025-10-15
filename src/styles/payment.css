@@ -6,8 +6,7 @@
   justify-content: center;
   align-items: center;
   position: relative;
-
-  background-image: url('../assets/4597140.jpg'); /* Your image */
+  background-image: url('/4597140.jpg');  /* Your image */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

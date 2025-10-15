@@ -7,7 +7,7 @@
   align-items: center;
   position: relative;
 
-  background-image: url('../assets/cart.jpg'); /* Your image */
+  background-image: url('/cart.jpg'); /* Your image */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

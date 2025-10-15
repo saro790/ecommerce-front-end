@@ -1,6 +1,6 @@
 /* Full page background */
 .register-page {
-  background-image: url('/back.jpg'); /* public/back.jpg */
+  background-image: url('/back.jpg'); /* ✅ public folder-ல் இருக்கும் image */
   width: 100vw;
   height: 100vh;
   background-size: cover;

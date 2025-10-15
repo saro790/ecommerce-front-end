@@ -1,5 +1,6 @@
-/* Full page with background */
+/* Full page background */
 .login-page {
+  background-image: url('/beach.jpg'); /* public folder-ல் இருந்தால் */
   width: 100vw;
   height: 100vh;
   background-size: cover;
@@ -7,7 +8,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   overflow: hidden;
 }
 
@@ -53,13 +54,13 @@
   box-shadow: 0 0 10px rgba(255,255,255,0.4);
 }
 
-/* Login Button */
+/* Buttons */
 .login-button {
   width: 100%;
   padding: 12px;
   border-radius: 10px;
   border: none;
-  background: #1abc9c;
+  background: #3498db;
   color: #fff;
   font-size: 1.1rem;
   cursor: pointer;
@@ -67,7 +68,7 @@
 }
 
 .login-button:hover {
-  background: #16a085;
+  background: #2980b9;
   transform: scale(1.05);
 }
 
@@ -78,7 +79,7 @@
 }
 
 .register-link {
-  color: #1abc9c;
+  color: #3498db;
   text-decoration: none;
   font-weight: bold;
 }

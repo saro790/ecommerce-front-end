@@ -4,7 +4,7 @@
   position: relative;
   min-height: 100vh;
   padding: 20px;
-  background-image: url('../assets/grocery.jpg'); /* update your image path */
+  background-image: url('/grocery.jpg'); /* update your image path */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

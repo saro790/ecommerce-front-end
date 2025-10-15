@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 import { useAuth } from "../context/AuthContext";
-import beachImage from "../assets/beach.jpg"; // asset image
-import "../styles/login.css";
+import "../styles/login.css"; // CSS import
 
 function Login() {
   const [formData, setFormData] = useState({ username: "", password: "" });
@@ -34,10 +33,7 @@ function Login() {
   };
 
   return (
-    <div
-      className="login-page"
-      style={{ backgroundImage: `url(${beachImage})` }}
-    >
+    <div className="login-page">
       <div className="login-container">
         <h2 className="login-title">Welcome Back</h2>
         {error && <div className="login-message">{error}</div>}
