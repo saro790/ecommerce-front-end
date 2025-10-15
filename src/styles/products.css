@@ -4,7 +4,6 @@
   position: relative;
   min-height: 100vh;
   padding: 20px;
-  background-image: url('/grocery.jpg'); /* public folder-ல் உள்ள image */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

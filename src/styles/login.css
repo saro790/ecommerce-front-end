@@ -1,6 +1,5 @@
 /* Full page background */
-.login-page {
-  background-image: url('/beach.jpg'); /* public folder-ல் இருந்தால் */
+.login-page { 
   width: 100vw;
   height: 100vh;
   background-size: cover;
