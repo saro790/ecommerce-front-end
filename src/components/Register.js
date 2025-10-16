@@ -41,7 +41,10 @@ function Register() {
   };
 
   return (
-    <div className="register-page">
+    <div
+  className="register-page"
+  style={{ backgroundImage: `url(${backImage})` }} // ✅ Set background here
+>
       <div className="register-container">
         <h2 className="register-title">Register</h2>
         {error && <div className="register-message">{error}</div>}
