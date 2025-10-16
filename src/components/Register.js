@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 import { useAuth } from "../context/AuthContext";
-import backImage from "../assets/images/back.jpg"; // ✅ background image import
+import backImage from "../assets/images/back.jpg"; // ✅ Import the image
 import "../styles/register.css";
 
 function Register() {
@@ -21,16 +21,19 @@ function Register() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     if (formData.password !== formData.confirm_password) {
       setError("⚠️ Passwords do not match");
       return;
     }
+
     try {
       await axios.post("http://127.0.0.1:8000/api/register/", {
         username: formData.username,
         password: formData.password,
       });
-      login(formData.username); // auto-login
+
+      login(formData.username);
       navigate("/products");
     } catch (err) {
       setError("⚠️ Registration failed. Username may already exist.");
@@ -40,7 +43,7 @@ function Register() {
   return (
     <div
       className="register-page"
-      style={{ backgroundImage: `url(${backImage})` }} // ✅ inline background
+      style={{ backgroundImage: `url(${backImage})` }} // ✅ Inline background
     >
       <div className="register-container">
         <h2 className="register-title">Register</h2>
