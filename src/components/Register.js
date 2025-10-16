@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 import { useAuth } from "../context/AuthContext";
+import backImage from "../assets/images/back.jpg";
 import "../styles/register.css"; // CSS import
 
 function Register() {
