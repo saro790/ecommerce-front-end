@@ -1,10 +1,8 @@
-/* Full page background */
 .register-page {
   width: 100vw;
   height: 100vh;
   background-size: cover;
   background-position: center;
-  background-image: url("/back.jpg");
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,7 +10,6 @@
   overflow: hidden;
 }
 
-/* Glassmorphism container */
 .register-container {
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(15px);
@@ -27,14 +24,12 @@
   animation: fadeIn 1s ease;
 }
 
-/* Title */
 .register-title {
   font-size: 2rem;
   color: #111;
   margin-bottom: 20px;
 }
 
-/* Input Fields */
 .register-input {
   width: 100%;
   padding: 12px 15px;
@@ -54,7 +49,6 @@
   box-shadow: 0 0 10px rgba(255,255,255,0.4);
 }
 
-/* Buttons */
 .register-button {
   width: 100%;
   padding: 12px;
@@ -72,7 +66,6 @@
   transform: scale(1.05);
 }
 
-/* Footer Link */
 .register-footer {
   margin-top: 15px;
   color: #111;
@@ -88,7 +81,6 @@
   text-decoration: underline;
 }
 
-/* Error Message */
 .register-message {
   background: rgba(255, 0, 0, 0.2);
   color: #b00;
@@ -98,13 +90,11 @@
   font-weight: bold;
 }
 
-/* Fade-in animation */
 @keyframes fadeIn {
   from {opacity:0; transform: translateY(-20px);}
   to {opacity:1; transform: translateY(0);}
 }
 
-/* Mobile responsiveness */
 @media (max-width: 480px) {
   .register-container {
     padding: 30px 20px;
