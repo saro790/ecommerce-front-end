@@ -1,17 +1,14 @@
-/* Full page background */
 .login-page { 
   width: 100vw;
   height: 100vh;
-  background-size: cover;
-  background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   overflow: hidden;
+  background: linear-gradient(135deg, #e0f7fa, #c8e6c9);
 }
 
-/* Glassmorphism container */
 .login-container {
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(15px);
@@ -20,40 +17,52 @@
   padding: 40px 30px;
   width: 90%;
   max-width: 400px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37),
+              inset 0 0 10px rgba(255,255,255,0.2);
   border: 1px solid rgba(255, 255, 255, 0.3);
   text-align: center;
-  animation: fadeIn 1s ease;
+  animation: float 6s ease-in-out infinite;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Title */
+.login-container:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 16px 40px rgba(31, 38, 135, 0.45),
+              inset 0 0 15px rgba(255,255,255,0.25);
+}
+
+@keyframes float {
+  0%,100% {transform: translateY(0);}
+  50% {transform: translateY(-10px);}
+}
+
 .login-title {
   font-size: 2rem;
   color: #111;
   margin-bottom: 20px;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.4);
 }
 
-/* Input Fields */
 .login-input {
   width: 100%;
   padding: 12px 15px;
   margin-bottom: 15px;
   border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255,255,255,0.5);
+  background: rgba(255,255,255,0.25);
   color: #111;
   font-size: 1rem;
   outline: none;
-  transition: 0.3s;
+  transition: all 0.3s ease;
 }
 
 .login-input:focus {
-  background: rgba(255, 255, 255, 0.35);
+  background: rgba(255,255,255,0.35);
   border-color: #fff;
-  box-shadow: 0 0 10px rgba(255,255,255,0.4);
+  box-shadow: 0 0 12px rgba(255,255,255,0.5);
+  transform: scale(1.02);
 }
 
-/* Buttons */
 .login-button {
   width: 100%;
   padding: 12px;
@@ -63,15 +72,15 @@
   color: #fff;
   font-size: 1.1rem;
   cursor: pointer;
-  transition: 0.3s;
+  transition: all 0.3s ease;
 }
 
 .login-button:hover {
   background: #2980b9;
   transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
-/* Footer Link */
 .login-footer {
   margin-top: 15px;
   color: #111;
@@ -87,7 +96,6 @@
   text-decoration: underline;
 }
 
-/* Error Message */
 .login-message {
   background: rgba(255, 0, 0, 0.2);
   color: #b00;
@@ -95,12 +103,6 @@
   border-radius: 10px;
   margin-bottom: 10px;
   font-weight: bold;
-}
-
-/* Fade-in animation */
-@keyframes fadeIn {
-  from {opacity:0; transform: translateY(-20px);}
-  to {opacity:1; transform: translateY(0);}
 }
 
 /* Mobile responsiveness */

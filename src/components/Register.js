@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 import { useAuth } from "../context/AuthContext";
-import backImage from "../assets/images/back.jpg"; // ✅ Import the image
 import "../styles/register.css";
 
 function Register() {
@@ -43,7 +42,7 @@ function Register() {
   return (
     <div
       className="register-page"
-      style={{ backgroundImage: `url(${backImage})` }} // ✅ Inline background
+      
     >
       <div className="register-container">
         <h2 className="register-title">Register</h2>

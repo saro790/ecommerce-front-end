@@ -1,27 +1,106 @@
 .cart-container {
-  width:100vw; min-height:100vh; display:flex; justify-content:center; align-items:center; position:relative;
-  background-size:cover; background-position:center; background-repeat:no-repeat;
+  width:100vw; min-height:100vh;
+  display:flex; justify-content:center; align-items:center;
+  position:relative;
+  background: linear-gradient(135deg, #e0f7fa, #c8e6c9);
 }
+
 .cart-container::before {
-  content:""; position:absolute; width:100%; height:100%; background:rgba(0,0,0,0.4); top:0; left:0; z-index:1;
+  content:""; position:absolute;
+  width:100%; height:100%;
+  background:rgba(0,0,0,0.2);
+  top:0; left:0; z-index:1;
 }
+
 .glass-card {
-  position:relative; z-index:2; width:90%; max-width:900px; padding:40px 30px;
-  border-radius:25px; background:rgba(255,255,255,0.15);
-  box-shadow:0 8px 32px rgba(31,38,135,0.37);
-  backdrop-filter:blur(10px); border:1px solid rgba(255,255,255,0.18);
-  color:#fff; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align:center;
-  animation: float 6s ease-in-out infinite; transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position:relative; z-index:2;
+  width:90%; max-width:900px; padding:40px 30px;
+  border-radius:25px;
+  background:rgba(255,255,255,0.15);
+  box-shadow: 0 8px 32px rgba(31,38,135,0.37),
+              inset 0 0 10px rgba(255,255,255,0.2);
+  backdrop-filter: blur(12px);
+  border:1px solid rgba(255,255,255,0.18);
+  color:#fff; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align:center;
+  animation: float 6s ease-in-out infinite;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+
 @keyframes float {0%,100%{transform:translateY(0);}50%{transform:translateY(-10px);}}
+
 .glass-card h2 {margin-bottom:25px; font-size:2rem; text-shadow:1px 1px 5px rgba(0,0,0,0.5);}
-.table {background:rgba(255,255,255,0.15); backdrop-filter:blur(5px); color:#fff;}
-.table th,.table td {text-align:center; vertical-align:middle;}
-.table th {background:rgba(255,255,255,0.2);}
-.table td button {transition:all 0.3s ease;}
-.table td button:hover {transform:scale(1.05);}
-.btn-glass {width:100%; padding:15px; border-radius:20px; border:1px solid rgba(255,255,255,0.4); background:rgba(255,255,255,0.25); color:#fff; font-size:1.1rem; cursor:pointer; transition:all 0.3s ease; backdrop-filter:blur(5px);}
-.btn-glass:hover {background:rgba(255,255,255,0.45); color:#000; transform:scale(1.05); border:1px solid rgba(255,255,255,0.7);}
+
+.table {
+  background:rgba(255,255,255,0.15);
+  backdrop-filter:blur(5px);
+  color:#fff;
+  width:100%;
+  border-collapse: separate;
+  border-spacing:0 10px;
+}
+
+.table th, .table td {text-align:center; vertical-align:middle; padding:12px 15px;}
+
+.table th {
+  background:rgba(255,255,255,0.2);
+  border-radius:12px;
+}
+
+.table tbody tr {
+  background: rgba(255,255,255,0.1);
+  border-radius:12px;
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.4), -4px -4px 10px rgba(255,255,255,0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.table tbody tr:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 6px 6px 15px rgba(0,0,0,0.5), -6px -6px 15px rgba(255,255,255,0.1);
+}
+
+.table td button {
+  transition: all 0.3s ease;
+}
+
+.table td button:hover {
+  transform: scale(1.05);
+}
+
+.btn-glass {
+  width:100%;
+  padding:15px;
+  border-radius:20px;
+  border:1px solid rgba(255,255,255,0.4);
+  background:rgba(255,255,255,0.25);
+  color:#fff;
+  font-size:1.1rem;
+  cursor:pointer;
+  transition:all 0.3s ease;
+  backdrop-filter:blur(5px);
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.2), -2px -2px 8px rgba(255,255,255,0.1);
+}
+
+.btn-glass:hover {
+  background:rgba(255,255,255,0.45);
+  color:#000;
+  transform: scale(1.05);
+  border:1px solid rgba(255,255,255,0.7);
+  box-shadow: 4px 4px 15px rgba(0,0,0,0.3), -4px -4px 15px rgba(255,255,255,0.15);
+}
+
 .table-responsive {overflow-x:auto;}
-@media (max-width:768px) { .glass-card {padding:30px 20px;} .glass-card h2 {font-size:1.6rem;} .table td,.table th{font-size:0.95rem; padding:8px;} .btn-glass{padding:12px;font-size:1rem;} }
-@media (max-width:480px) { .glass-card{padding:25px 15px;} .glass-card h2{font-size:1.4rem;} .table td,.table th{font-size:0.9rem; padding:6px;} .btn-glass{padding:10px;font-size:0.95rem;} }
+
+@media (max-width:768px) {
+  .glass-card {padding:30px 20px;}
+  .glass-card h2 {font-size:1.6rem;}
+  .table td,.table th {font-size:0.95rem; padding:8px;}
+  .btn-glass {padding:12px;font-size:1rem;}
+}
+
+@media (max-width:480px) {
+  .glass-card {padding:25px 15px;}
+  .glass-card h2 {font-size:1.4rem;}
+  .table td,.table th {font-size:0.9rem; padding:6px;}
+  .btn-glass {padding:10px;font-size:0.95rem;}
+}

@@ -1,15 +1,16 @@
+/* ====== Full page setup ====== */
 .register-page {
   width: 100vw;
   height: 100vh;
-  background-size: cover;
-  background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   overflow: hidden;
+  background: linear-gradient(135deg, #e0f7fa, #c8e6c9); /* soft gradient background */
 }
 
+/* ====== Glassmorphism container with 3D effect ====== */
 .register-container {
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(15px);
@@ -18,25 +19,47 @@
   padding: 40px 30px;
   width: 90%;
   max-width: 400px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
-  border: 1px solid rgba(255, 255, 255, 0.3);
   text-align: center;
+  
+  /* 3D box-shadow */
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.25),
+    0 0 0 1px rgba(255, 255, 255, 0.3),
+    inset 0 0 10px rgba(255, 255, 255, 0.2);
+  
+  transition: 0.4s;
   animation: fadeIn 1s ease;
 }
 
+/* Floating effect on hover */
+.register-container:hover {
+  transform: translateY(-8px);
+  box-shadow: 
+    0 20px 40px rgba(0,0,0,0.3),
+    0 0 0 1px rgba(255,255,255,0.3),
+    inset 0 0 15px rgba(255,255,255,0.2);
+}
+
+/* ====== Title ====== */
 .register-title {
   font-size: 2rem;
   color: #111;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
+/* ====== Input fields with inset 3D ====== */
 .register-input {
   width: 100%;
   padding: 12px 15px;
   margin-bottom: 15px;
   border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  background: rgba(255, 255, 255, 0.25);
+  border: none;
+  background: rgba(255,255,255,0.2);
+  
+  /* inset shadow for 3D effect */
+  box-shadow: inset 2px 2px 6px rgba(0,0,0,0.2),
+              inset -2px -2px 6px rgba(255,255,255,0.1);
+  
   color: #111;
   font-size: 1rem;
   outline: none;
@@ -44,28 +67,36 @@
 }
 
 .register-input:focus {
-  background: rgba(255, 255, 255, 0.35);
-  border-color: #fff;
-  box-shadow: 0 0 10px rgba(255,255,255,0.4);
+  box-shadow: inset 2px 2px 6px rgba(0,0,0,0.2),
+              inset -2px -2px 6px rgba(255,255,255,0.3),
+              0 0 10px rgba(52,152,219,0.5);
+  background: rgba(255,255,255,0.25);
 }
 
+/* ====== Button with gradient 3D ====== */
 .register-button {
   width: 100%;
   padding: 12px;
   border-radius: 10px;
   border: none;
-  background: #3498db;
-  color: #fff;
   font-size: 1.1rem;
+  color: #fff;
   cursor: pointer;
+  
+  background: linear-gradient(145deg, #3498db, #2980b9);
+  box-shadow: 4px 4px 15px rgba(0,0,0,0.2),
+              -4px -4px 15px rgba(255,255,255,0.1);
+  
   transition: 0.3s;
 }
 
 .register-button:hover {
-  background: #2980b9;
-  transform: scale(1.05);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 6px 6px 20px rgba(0,0,0,0.3),
+              -6px -6px 20px rgba(255,255,255,0.15);
 }
 
+/* ====== Footer ====== */
 .register-footer {
   margin-top: 15px;
   color: #111;
@@ -81,6 +112,7 @@
   text-decoration: underline;
 }
 
+/* ====== Error/Message ====== */
 .register-message {
   background: rgba(255, 0, 0, 0.2);
   color: #b00;
@@ -90,11 +122,13 @@
   font-weight: bold;
 }
 
+/* ====== Fade-in animation ====== */
 @keyframes fadeIn {
   from {opacity:0; transform: translateY(-20px);}
   to {opacity:1; transform: translateY(0);}
 }
 
+/* ====== Responsive ====== */
 @media (max-width: 480px) {
   .register-container {
     padding: 30px 20px;

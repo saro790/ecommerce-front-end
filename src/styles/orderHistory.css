@@ -1,58 +1,73 @@
-/* src/styles/orderHistory.css */
-
 .order-history {
   max-width: 900px;
   margin: 50px auto;
-  padding: 20px;
-  background: #1e1e2f; /* dark 3D background */
-  border-radius: 15px;
-  box-shadow: 10px 10px 20px #0f0f1a, -10px -10px 20px #2a2a40; /* 3D shadow effect */
+  padding: 25px 20px;
+  background: rgba(30,30,47,0.85); /* dark glass */
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  box-shadow: 10px 10px 30px rgba(0,0,0,0.6), -10px -10px 30px rgba(60,60,80,0.3);
   color: #fff;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.order-history:hover {
+  transform: translateY(-6px);
+  box-shadow: 12px 12px 40px rgba(0,0,0,0.7), -12px -12px 40px rgba(60,60,80,0.4);
 }
 
 .order-history h2 {
   text-align: center;
   margin-bottom: 25px;
-  text-shadow: 1px 1px 2px #000;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
+  font-size: 2rem;
 }
 
 .order-history table {
   width: 100%;
   border-collapse: separate;
-  border-spacing: 0;
-}
-
-.order-history th,
-.order-history td {
-  padding: 12px 15px;
-  text-align: left;
+  border-spacing: 0 10px; /* spacing for floating rows */
 }
 
 .order-history thead tr {
-  background: #2c2c44;
+  background: rgba(44,44,68,0.8);
   box-shadow: inset 0 2px 5px rgba(0,0,0,0.5);
-  border-radius: 10px;
+  border-radius: 12px;
 }
 
 .order-history tbody tr {
-  background: #27273d;
-  margin-bottom: 10px;
-  box-shadow: 4px 4px 8px rgba(0,0,0,0.6), -4px -4px 8px rgba(255,255,255,0.05);
-  border-radius: 8px;
-  transition: transform 0.2s;
+  background: rgba(39,39,61,0.8);
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.6), -4px -4px 10px rgba(255,255,255,0.05);
+  border-radius: 12px;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .order-history tbody tr:hover {
-  transform: translateY(-3px);
+  transform: translateY(-5px) scale(1.01);
+  box-shadow: 6px 6px 15px rgba(0,0,0,0.7), -6px -6px 15px rgba(255,255,255,0.1);
 }
 
 .order-history th {
   color: #ffdd57;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  padding: 12px 15px;
 }
 
 .order-history td {
   color: #e0e0e0;
+  padding: 12px 15px;
+}
+
+/* Responsive */
+@media (max-width:768px) {
+  .order-history { padding:20px 15px; }
+  .order-history h2 { font-size:1.5rem; }
+  .order-history th, .order-history td { padding:10px 12px; font-size:0.9rem; }
+}
+
+@media (max-width:480px) {
+  .order-history { padding:15px 10px; }
+  .order-history h2 { font-size:1.3rem; }
+  .order-history th, .order-history td { padding:8px 10px; font-size:0.8rem; }
 }
